@@ -13,7 +13,8 @@ public class BalancedFactory implements AnimalFactory{
 
     @Override
     public Animal createAnimal() {
-        if(randAnimals.size()==0 || randAnimals == null){
+
+        if(randAnimals == null || randAnimals.size()==0 ){
             randAnimals = new ArrayList<Animal>(animals.size());
             for (Animal item : animals) randAnimals.add(item.clone());
         }
@@ -23,7 +24,7 @@ public class BalancedFactory implements AnimalFactory{
         Animal choosedAnimal = randAnimals.get(randomNum);
         randAnimals.remove(randomNum);
 
-        System.out.println(randomNum);
+
 
 
 

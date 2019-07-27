@@ -19,7 +19,9 @@ public class Main {
         zwierzaki.add(new Crocodile());
         BalancedFactory factory= new BalancedFactory(zwierzaki);
 
-        for(int i=0;i<10;i++){
+        for(int i=0;i<30;i++){
+            if(i%3 ==0) System.out.print(i);
+
             factory.createAnimal().sayYourName();
         }
 
@@ -28,15 +30,6 @@ public class Main {
 
 
 
-
-        Random rand = new Random();
-        int randomNum = rand.nextInt(((zwierzaki.size()-1) - 0) + 1) + 0;
-        zwierzaki.remove(randomNum);
-        System.out.println(randomNum);
-
-        for (Animal addd :zwierzaki){
-            addd.sayYourName();
-        }
 
 //        ArrayList <Animal> t = new ArrayList<>(zwierzaki);
 //
