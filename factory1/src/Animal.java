@@ -1,5 +1,4 @@
-public class  Animal implements Cloneable{
-    int i=9;
+public class Animal implements Cloneable{
     public void sayYourName(){
 
     }
@@ -13,9 +12,6 @@ public class  Animal implements Cloneable{
         }
 
     }
-    Animal a = new Animal();
-    Animal b = (Animal) ((Animal) a).clone();
-
 
 
 }

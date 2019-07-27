@@ -10,14 +10,19 @@ public class Main {
     }
 
     public static void main(String []args){
-        ArrayList <Animal> t = null;
-        System.out.println(t == null);
-//        ArrayList <Animal> zwierzaki = new ArrayList<>();
-//
-//        zwierzaki.add(new Cat());
-//        zwierzaki.add(new Dog());
-//        zwierzaki.add(new Crocodile());
-//
+        Animal a = new Animal();
+        Animal b = (Animal) ((Animal) a).clone();
+
+        ArrayList <Animal> zwierzaki = new ArrayList<>();
+
+        zwierzaki.add(new Cat());
+        zwierzaki.add(new Dog());
+        zwierzaki.add(new Crocodile());
+
+        ArrayList <Animal> t = new ArrayList<Animal>(zwierzaki.size());
+        for (Animal item : t) t.add(item.clone());
+
+
 //        ArrayList <Animal> t = new ArrayList<>(zwierzaki);
 //
 //

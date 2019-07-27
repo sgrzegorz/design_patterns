@@ -1,4 +1,4 @@
-public class Cat implements Animal{
+public class Cat extends Animal{
     @Override
     public void sayYourName() {
         System.out.println("Iam a cat");
