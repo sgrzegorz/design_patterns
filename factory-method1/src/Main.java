@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Random;
 
 
 public class Main {
@@ -10,14 +9,14 @@ public class Main {
     }
 
     public static void main(String []args){
-        Animal a = new Animal();
-        Animal b = (Animal) ((Animal) a).clone();
 
         ArrayList <Animal> zwierzaki = new ArrayList<>();
         zwierzaki.add(new Cat());
         zwierzaki.add(new Dog());
         zwierzaki.add(new Crocodile());
-        BalancedFactory factory= new BalancedFactory(zwierzaki);
+        AnimalFactory factory= new BalancedAnimalFactory(zwierzaki);
+
+
 
         for(int i=0;i<30;i++){
             if(i%3 ==0) System.out.print(i);

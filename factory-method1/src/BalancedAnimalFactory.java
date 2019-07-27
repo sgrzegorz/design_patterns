@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public class BalancedFactory implements AnimalFactory{
+public class BalancedAnimalFactory implements AnimalFactory{
 
     ArrayList<Animal> animals;
     ArrayList <Animal> randAnimals = null;
 
-    public BalancedFactory(ArrayList<Animal> zwierzeta){
+    public BalancedAnimalFactory(ArrayList<Animal> zwierzeta){
         this.animals = zwierzeta;
     }
 

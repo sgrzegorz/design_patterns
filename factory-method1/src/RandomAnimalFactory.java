@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public class RandomFactory {
+public class RandomAnimalFactory implements AnimalFactory {
     ArrayList<Animal> animals;
 
-    public RandomFactory(ArrayList<Animal> zwierzeta){
+    public RandomAnimalFactory(ArrayList<Animal> zwierzeta){
         this.animals = zwierzeta;
     }
 

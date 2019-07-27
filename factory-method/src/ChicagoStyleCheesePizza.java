@@ -8,7 +8,7 @@ public class ChicagoStyleCheesePizza extends Pizza {
 
     }
 
-    void cut(){
+    public void cut(){
         System.out.println("Cutting the pizza into square slices");
     }
 }
