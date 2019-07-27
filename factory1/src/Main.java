@@ -14,14 +14,29 @@ public class Main {
         Animal b = (Animal) ((Animal) a).clone();
 
         ArrayList <Animal> zwierzaki = new ArrayList<>();
-
         zwierzaki.add(new Cat());
         zwierzaki.add(new Dog());
         zwierzaki.add(new Crocodile());
+        BalancedFactory factory= new BalancedFactory(zwierzaki);
 
-        ArrayList <Animal> t = new ArrayList<Animal>(zwierzaki.size());
-        for (Animal item : t) t.add(item.clone());
+        for(int i=0;i<10;i++){
+            factory.createAnimal().sayYourName();
+        }
 
+
+
+
+
+
+
+        Random rand = new Random();
+        int randomNum = rand.nextInt(((zwierzaki.size()-1) - 0) + 1) + 0;
+        zwierzaki.remove(randomNum);
+        System.out.println(randomNum);
+
+        for (Animal addd :zwierzaki){
+            addd.sayYourName();
+        }
 
 //        ArrayList <Animal> t = new ArrayList<>(zwierzaki);
 //

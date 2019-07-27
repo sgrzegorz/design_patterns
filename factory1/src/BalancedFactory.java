@@ -3,31 +3,31 @@ import java.util.Random;
 
 public class BalancedFactory implements AnimalFactory{
 
-    ArrayList<Animal> zwierzeta;
-    ArrayList <Animal> t = null;
+    ArrayList<Animal> animals;
+    ArrayList <Animal> randAnimals = null;
 
     public BalancedFactory(ArrayList<Animal> zwierzeta){
-        this.zwierzeta = zwierzeta;
+        this.animals = zwierzeta;
     }
 
 
-//    @Override
-//    public Animal createAnimal() {
-////        if( t.size() == 0){
-////            ArrayList <Animal> t = new ArrayList<>(zwierzeta);
-////        }
-////        Animal k = t[0];
-////
-////        for(Animal i : t){
-////            i.sayYourName();
-////        }
-////
-////        Random rand = new Random();
-////        int randomNum = rand.nextInt((t.size() - 0) + 1) + 0;
-////
-////        Animal created = t[randomNum]
-////        t.remove(randomNum);
-////
-//
-//    }
+    @Override
+    public Animal createAnimal() {
+        if(randAnimals.size()==0 || randAnimals == null){
+            randAnimals = new ArrayList<Animal>(animals.size());
+            for (Animal item : animals) randAnimals.add(item.clone());
+        }
+
+        Random rand = new Random();
+        int randomNum = rand.nextInt(((randAnimals.size()-1) - 0) + 1) + 0;
+        Animal choosedAnimal = randAnimals.get(randomNum);
+        randAnimals.remove(randomNum);
+
+        System.out.println(randomNum);
+
+
+
+
+        return choosedAnimal;
+    }
 }
