@@ -1,3 +1,7 @@
+import factory.ChicagoPizzaIngredientFactory;
+import factory.PizzaIngredientFactory;
+import pizza.*;
+
 public class ChicagoPizzaStore extends PizzaStore {
 
     protected Pizza createPizza(String item) {

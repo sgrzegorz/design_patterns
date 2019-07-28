@@ -1,3 +1,8 @@
+package factory;
+
+import ingredients.*;
+
+
 public interface PizzaIngredientFactory {
     public Dough createDough();
 

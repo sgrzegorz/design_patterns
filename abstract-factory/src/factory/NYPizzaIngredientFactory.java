@@ -1,3 +1,7 @@
+package factory;
+
+import ingredients.*;
+
 public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
     @Override
     public Dough createDough() {
@@ -11,7 +15,7 @@ public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
 
     @Override
     public Cheese createCheese() {
-        return ReggianoCheese();
+        return new ReggianoCheese();
     }
 
     @Override

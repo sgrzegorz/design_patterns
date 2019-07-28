@@ -1,3 +1,7 @@
+package pizza;
+
+import factory.PizzaIngredientFactory;
+
 public class CheesePizza extends Pizza {
     PizzaIngredientFactory ingredientFactory;
 

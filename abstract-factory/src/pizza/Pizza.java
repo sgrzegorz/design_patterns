@@ -1,4 +1,7 @@
-import java.util.ArrayList;
+package pizza;
+
+import ingredients.*;
+
 
 public abstract class Pizza {
     String name;
@@ -11,23 +14,23 @@ public abstract class Pizza {
 
     abstract void prepare();
 
-    void bake() {
+    public void bake() {
         System.out.println("Bake for 25 minutes at 350");
     }
 
-    void cut() {
+    public void cut() {
         System.out.println("Cutting the pizza into diagonal slices");
     }
 
-    void box() {
+    public void box() {
         System.out.println("Place pizza in official PizzaStore box");
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 

@@ -1,7 +1,11 @@
-public class ClamPizza extends Pizza {
+package pizza;
+
+import factory.PizzaIngredientFactory;
+
+public class PepperoniPizza extends Pizza {
     PizzaIngredientFactory ingredientFactory;
 
-    public ClamPizza(PizzaIngredientFactory ingredientFactory) {
+    public PepperoniPizza(PizzaIngredientFactory ingredientFactory) {
         this.ingredientFactory = ingredientFactory;
 
     }
@@ -13,5 +17,4 @@ public class ClamPizza extends Pizza {
         cheese = ingredientFactory.createCheese();
         clam = ingredientFactory.createClam();
     }
-
 }
