@@ -13,10 +13,13 @@ public class LightOnCommand implements Command {
     @Override
     public void execute() {
         light.on();
+        System.out.println("LighOnCommand");
     }
 
     @Override
     public void undo() {
+        System.out.println("LighOnCommand undo");
+
         light.off();
     }
 }

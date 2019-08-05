@@ -13,10 +13,11 @@ public class StereoOnCommand implements Command {
     public void execute() {
         stereo.on();
         stereo.setVolume(11);
+        System.out.println("StereoOnCommand ");
     }
 
     @Override
     public void undo() {
-
+        System.out.println("StereoOnCommand undo");
     }
 }

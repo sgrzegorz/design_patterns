@@ -68,7 +68,8 @@ public class Main {
 
         System.out.println(remoteControl);
         remoteControl.onButtonWasPushed(4);
-        remoteControl.offButtonWasPushed(4);
+        remoteControl.undoButtonWasPushed();
+//        remoteControl.offButtonWasPushed(4);
 
 
 

@@ -9,11 +9,11 @@ public class FiliOnCommand implements Command {
     }
     @Override
     public void execute() {
-
+        System.out.println("filiOnCommand");
     }
 
     @Override
     public void undo() {
-
+        System.out.println("filiOnCommand undo");
     }
 }

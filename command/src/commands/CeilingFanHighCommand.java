@@ -11,11 +11,13 @@ public class CeilingFanHighCommand implements Command{
     }
 
     public void execute(){
+        System.out.println("CeilingFanHighCommand");
         prevSpeed =ceilingFan.getSpeed();
         ceilingFan.high();
     }
 
     public void undo(){
+        System.out.println("CeilingFanHighCommand undo");
         if (prevSpeed == CeilingFan.HIGH) {
             ceilingFan.high();
         } else if (prevSpeed == CeilingFan.MEDIUM) {

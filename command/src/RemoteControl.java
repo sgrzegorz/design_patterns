@@ -1,10 +1,12 @@
 import commands.Command;
 import commands.NoCommand;
+import java.util.Stack;
+
 
 public class RemoteControl {
     Command[] onCommands;
     Command[] offCommands;
-    Command undoCommand;
+    Stack undoCommand;
 
     public RemoteControl(){
         onCommands = new Command[7];
@@ -15,7 +17,8 @@ public class RemoteControl {
             onCommands[i] = noCommand;
             offCommands[i] = noCommand;
         }
-        undoCommand=noCommand;
+        undoCommand = new Stack();
+
     }
 
     public void setCommand(int slot, Command onCommand, Command offCommand){
@@ -25,16 +28,17 @@ public class RemoteControl {
 
     public void onButtonWasPushed(int slot){
         onCommands[slot].execute();
-        undoCommand = onCommands[slot];
+        undoCommand.push(onCommands[slot]);
     }
 
     public void offButtonWasPushed(int slot){
         offCommands[slot].execute();
-        undoCommand = offCommands[slot];
+        undoCommand.push(offCommands[slot]);
     }
 
     public void undoButtonWasPushed(){
-        undoCommand.undo();
+        if(undoCommand.empty()) return;
+        ((Command) undoCommand.pop()).undo();
     }
 
     public String toString(){

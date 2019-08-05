@@ -10,11 +10,11 @@ public class TVOffCommand implements Command {
 
     @Override
     public void execute() {
-
+        System.out.println("tv off");
     }
 
     @Override
     public void undo() {
-
+        System.out.println("tv off undo");
     }
 }

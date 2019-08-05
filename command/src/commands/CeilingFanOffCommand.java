@@ -14,9 +14,11 @@ public class CeilingFanOffCommand implements Command{
     public void execute() {
         prevSpeed = ceilingFan.getSpeed();
         ceilingFan.off();
+        System.out.println("CeilingFanOffCommand");
     }
 
     public void undo(){
+        System.out.println("CeilingFanOffCommand undo");
         if (prevSpeed == CeilingFan.HIGH) {
             ceilingFan.high();
         } else if (prevSpeed == CeilingFan.MEDIUM) {

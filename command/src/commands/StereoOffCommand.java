@@ -11,11 +11,11 @@ public class StereoOffCommand implements Command {
 
     @Override
     public void execute() {
-
+        System.out.println("StereoOffCommand ");
     }
 
     @Override
     public void undo() {
-
+        System.out.println("StereoOffCommand undo");
     }
 }

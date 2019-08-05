@@ -12,9 +12,10 @@ public class LightOffCommand implements Command {
     @Override
     public void execute() {
         light.off();
+        System.out.println("LighOffCommand");
     }
     @Override
     public void undo() {
-        light.on();
+        light.on();System.out.println("LighOffCommand undo");
     }
 }

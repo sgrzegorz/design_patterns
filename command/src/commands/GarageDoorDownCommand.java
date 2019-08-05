@@ -10,11 +10,11 @@ public class GarageDoorDownCommand implements Command{
 
     @Override
     public void execute() {
-
+        System.out.println("GarageDoorDownCommand");
     }
 
     @Override
     public void undo() {
-
+        System.out.println("GarageDoorDownCommand undo");
     }
 }
