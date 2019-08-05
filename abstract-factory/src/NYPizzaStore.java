@@ -1,6 +1,6 @@
 import factory.NYPizzaIngredientFactory;
 import factory.PizzaIngredientFactory;
-import pizza.*
+import pizza.*;
 
 public class NYPizzaStore extends PizzaStore {
 

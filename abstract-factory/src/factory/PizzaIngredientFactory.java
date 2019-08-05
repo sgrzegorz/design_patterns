@@ -1,6 +1,6 @@
 package factory;
 
-import ingredients.*;
+import factory.ingredients.*;
 
 
 public interface PizzaIngredientFactory {

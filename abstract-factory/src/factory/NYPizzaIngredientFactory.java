@@ -1,6 +1,5 @@
 package factory;
-
-import ingredients.*;
+import factory.ingredients.*;
 
 public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
     @Override

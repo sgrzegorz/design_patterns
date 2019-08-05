@@ -1,9 +1,13 @@
-import pkg.*;
+import java.util.Stack;
 
 public class Main {
 
     public static void main(String []args){
-        Cat cat = new Cat();
+        Stack st = new Stack();
+        st.pop();
+        st.push(new Cat());
+        st.pop();
+
     }
 }
 

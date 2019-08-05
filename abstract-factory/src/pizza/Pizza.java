@@ -1,6 +1,6 @@
 package pizza;
 
-import ingredients.*;
+import factory.ingredients.*;
 
 
 public abstract class Pizza {
@@ -12,7 +12,7 @@ public abstract class Pizza {
     Pepperoni pepperoni;
     Clams clam;
 
-    abstract void prepare();
+    public abstract void prepare();
 
     public void bake() {
         System.out.println("Bake for 25 minutes at 350");
@@ -35,6 +35,7 @@ public abstract class Pizza {
     }
 
     public String toString() {
+        return name+dough;
 // code to print pizza here
     }
 
