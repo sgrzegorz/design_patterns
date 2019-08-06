@@ -6,7 +6,7 @@ public class Main {
 
 
         RemoteControl remoteControl = new RemoteControl();
-/*
+
         Light livingRoomLight = new Light("Living Room");
         Light kitchenLight = new Light("Kitchen");
         CeilingFan ceilingFan= new CeilingFan("Living Room");
@@ -33,21 +33,21 @@ public class Main {
         remoteControl.setCommand(4, ceilingFanMedium, ceilingFanOff);
         remoteControl.setCommand(5, ceilingFanHigh, ceilingFanOff);
 
-        System.out.println(remoteControl);
 
-        remoteControl.onButtonWasPushed(0);
-        remoteControl.offButtonWasPushed(0);
-        remoteControl.onButtonWasPushed(1);
-        remoteControl.offButtonWasPushed(1);
-        remoteControl.onButtonWasPushed(2);
-        remoteControl.offButtonWasPushed(2);
-        remoteControl.onButtonWasPushed(3);
-        remoteControl.offButtonWasPushed(3);
-*/
+
+//        remoteControl.onButtonWasPushed(0);
+//        remoteControl.offButtonWasPushed(0);
+//        remoteControl.onButtonWasPushed(1);
+//        remoteControl.offButtonWasPushed(1);
+//        remoteControl.onButtonWasPushed(2);
+//        remoteControl.offButtonWasPushed(2);
+//        remoteControl.onButtonWasPushed(3);
+//        remoteControl.offButtonWasPushed(3);
+
 
         //////////////MACRO/////////////////////////////////////////////////////////////////////////////////
         Light light = new Light("Living Room");
-        Stereo stereo = new Stereo("Living Room");
+//        Stereo stereo = new Stereo("Living Room");
         TV tv = new TV("Living Room");
         Fili fili = new Fili();
         TVOnCommand tvOn = new TVOnCommand(tv);
@@ -57,7 +57,7 @@ public class Main {
 
         TVOffCommand tvOff = new TVOffCommand(tv);
         FiliOffCommand filiOff = new FiliOffCommand(fili);
-        StereoOffCommand stereoOff = new StereoOffCommand(stereo);
+//        StereoOffCommand stereoOff = new StereoOffCommand(stereo);
         LightOffCommand lightOff = new LightOffCommand(light);
 
         Command[] partyOn = { lightOn, stereoOn, tvOn, filiOn};
@@ -68,6 +68,9 @@ public class Main {
 
         System.out.println(remoteControl);
         remoteControl.onButtonWasPushed(4);
+        remoteControl.onButtonWasPushed(2);
+        remoteControl.undoButtonWasPushed();
+        remoteControl.undoButtonWasPushed();
         remoteControl.undoButtonWasPushed();
 //        remoteControl.offButtonWasPushed(4);
 
