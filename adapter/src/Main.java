@@ -1,6 +1,4 @@
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
 
@@ -22,18 +20,24 @@ public class Main {
 //        testDuck(duck);
 //        System.out.println("\nThe TurkeyAdapter says...");
 //        testDuck(turkeyAdapter);
-        Map<Integer,String> mapa = new HashMap<>();
-        mapa.put(1,"jeden");
-        mapa.put(2,"dwa");
-        mapa.put(3,"trzy");
-        mapa.put(4,"cztery");
+        ArrayList al = new ArrayList();
+        al.add("C");
+        al.add("A");
+        al.add("E");
+        al.add("B");
+        al.add("D");
+        al.add("F");
 
-        EnumerationIterator it = new EnumerationIterator(new ENIterator<Map.Entry<Integer,String>>);
-        it.enum1 = mapa.entrySet().iterator();
-        while(it.hasNext()){
-            Map.Entry<Integer,String> pair = it.next();
-
+        Enumeration<String> enm = Collections.enumeration(al);
+        EnumerationIterator itr = new EnumerationIterator(enm);
+        while(itr.hasNext()){
+            String t = (String) itr.next();
+            System.out.println(t);
         }
+
+
+
+
 
 
     }

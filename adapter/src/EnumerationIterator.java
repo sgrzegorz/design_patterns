@@ -17,4 +17,8 @@ public class EnumerationIterator implements Iterator {
     public Object next() {
         return enum1.nextElement();
     }
+
+    public void remove(){
+        throw new UnsupportedOperationException();
+    }
 }

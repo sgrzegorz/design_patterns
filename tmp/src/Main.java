@@ -21,13 +21,7 @@ public class Main {
 //            System.out.println(e.nextElement());
 //
 
-        ArrayList al = new ArrayList();
-        al.add("C");
-        al.add("A");
-        al.add("E");
-        al.add("B");
-        al.add("D");
-        al.add("F");
+
 
         Iterator itr = al.iterator();
 
@@ -37,10 +31,7 @@ public class Main {
         }
         System.out.println();
 
-        Enumeration<String> enm = Collections.enumeration(al);
-        while(enm.hasMoreElements()){
-            System.out.print(enm.nextElement() +" ");
-        }
+
 
         Map<Integer,String> mapa = new HashMap<>();
         mapa.put(1,"jeden");
