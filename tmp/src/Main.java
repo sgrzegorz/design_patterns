@@ -1,30 +1,60 @@
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Stack;
+import java.util.*;
+import java.util.Enumeration;
+
 
 public class Main {
 
+
+
     public static void main(String []args){
+//        Map<Integer,String> mapa = new HashMap<>();
+//        Enumeration<Map<Integer,String>> e = new Enumeration<Map<Integer, String>>(mapa);
+//
+//        Enumeration paramEnum=getmapaNames();
+//        while (paramEnum.hasMoreElements()) {
+//            String paramName=paramEnum.nextElement().toString();
+//            initParameters.put(paramName,getInitParameter(paramName));
+//        }
+//
+//
+//        for (Enumeration<Map<Integer,String>> e = mapa.elements(); mapa.hasMoreElements();)
+//            System.out.println(e.nextElement());
+//
+
+        ArrayList al = new ArrayList();
+        al.add("C");
+        al.add("A");
+        al.add("E");
+        al.add("B");
+        al.add("D");
+        al.add("F");
+
+        Iterator itr = al.iterator();
+
+        while(itr.hasNext()) {
+            Object element = itr.next();
+            System.out.print(element + " ");
+        }
+        System.out.println();
+
+        Enumeration<String> enm = Collections.enumeration(al);
+        while(enm.hasMoreElements()){
+            System.out.print(enm.nextElement() +" ");
+        }
+
         Map<Integer,String> mapa = new HashMap<>();
         mapa.put(1,"jeden");
         mapa.put(2,"dwa");
         mapa.put(3,"trzy");
         mapa.put(4,"cztery");
+        Enumeration <Map.Entry<Integer,String>> enm1 = Collections.enumeration(mapa);
 
-        for(Map.Entry<Integer,String> c : mapa.entrySet()){
-            System.out.println(c);
+        while(enm1.hasMoreElements()){
+            System.out.print(enm.nextElement() +" ");
         }
 
-        long i=0;
-        Iterator <Map.Entry<Integer,String>> it = mapa.entrySet().iterator();
-        while(it.hasNext()){
-            Map.Entry<Integer,String> pair = it.next();
-            i+=pair.getKey();
-        }
-        System.out.println(i);
 
 
-    }
+}
 }
 
