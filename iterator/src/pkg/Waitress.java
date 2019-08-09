@@ -1,8 +1,14 @@
-public class Waitress {
-    PancakeHouseMenu pancakeHouseMenu;
-    DinerMenu dinerMenu;
+package pkg;
 
-    public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu) {
+import iterable.Menu;
+
+import java.util.Iterator;
+
+public class Waitress {
+    Menu pancakeHouseMenu;
+    Menu dinerMenu;
+
+    public Waitress(Menu pancakeHouseMenu, Menu dinerMenu) {
         this.pancakeHouseMenu = pancakeHouseMenu;
         this.dinerMenu = dinerMenu;
  

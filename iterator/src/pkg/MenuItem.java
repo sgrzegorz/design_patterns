@@ -1,3 +1,5 @@
+package pkg;
+
 public class MenuItem {
     String name;
     String description;
