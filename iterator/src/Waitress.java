@@ -4,6 +4,7 @@ public class Waitress {
 
     public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu) {
         this.pancakeHouseMenu = pancakeHouseMenu;
+        this.dinerMenu = dinerMenu;
  
     }
     

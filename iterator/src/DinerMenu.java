@@ -4,6 +4,7 @@ public class DinerMenu {
     MenuItem[] menuItems;
 
     public DinerMenu() {
+        menuItems = new MenuItem[MAX_ITEMS];
 
         addItem("Vegetarian BLT",
                 "(Fakin’) Bacon with lettuce & tomato on whole wheat", true, 2.99);
