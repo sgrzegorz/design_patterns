@@ -1,6 +1,7 @@
 import composite.Menu;
 import composite.MenuComponent;
 import composite.MenuItem;
+import iterator.CompositeIterator;
 
 public class Main {
     public static void main(String args[]) {
@@ -23,5 +24,7 @@ public class Main {
 // add more menu items here
         Waitress waitress = new Waitress(allMenus);
         waitress.printMenu();
+
+
     }
 }

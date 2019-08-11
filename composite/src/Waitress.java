@@ -14,11 +14,12 @@ public class Waitress {
     }
 
     public void printVegetarianMenu() {
-        Iterator iterator = allMenus.createIterator();
+
         System.out.println("\nVEGETARIAN MENU\n----");
+
+        Iterator iterator = allMenus.createIterator();
         while (iterator.hasNext()) {
-            MenuComponent menuComponent =
-                    (MenuComponent)iterator.next();
+            MenuComponent menuComponent = (MenuComponent)iterator.next();
             try {
                 if (menuComponent.isVegetarian()) {
                     menuComponent.print();
