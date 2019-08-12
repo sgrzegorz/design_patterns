@@ -1,3 +1,5 @@
+package remote;
+
 public class GumballMachine {
     State soldOutState;
     State noQuarterState;
@@ -6,9 +8,10 @@ public class GumballMachine {
     State state = soldOutState;
     State winnerState;
     int count = 0;
+    String location;
 
 
-    public GumballMachine(int numberGumballs) {
+    public GumballMachine(String location, int numberGumballs) {
 
         soldOutState = new SoldOutState(this);
         noQuarterState = new NoQuarterState(this);
@@ -72,5 +75,9 @@ public class GumballMachine {
     public State getWinnerState() {
         return winnerState;
     }
+    public String getLocation() {
+        return location;
+    }
+    public State getState(){return state;}
 
 }

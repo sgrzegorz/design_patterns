@@ -1,3 +1,5 @@
+package remote;
+
 public class WinnerState implements State {
     GumballMachine gumballMachine;
     public WinnerState(GumballMachine gumballMachine) {

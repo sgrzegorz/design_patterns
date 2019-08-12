@@ -1,3 +1,5 @@
+package remote;
+
 import java.util.Random;
 
 public class HasQuarterState implements State {

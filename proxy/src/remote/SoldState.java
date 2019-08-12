@@ -1,3 +1,5 @@
+package remote;
+
 public class SoldState implements State {
     GumballMachine gumballMachine;
 
