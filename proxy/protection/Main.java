@@ -1,5 +1,3 @@
-package protection;
-
 public class Main {
     // instance variables here
 

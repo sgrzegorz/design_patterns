@@ -1,5 +1,3 @@
-package remote;
-
 public class NoQuarterState implements State {
     GumballMachine gumballMachine;
 

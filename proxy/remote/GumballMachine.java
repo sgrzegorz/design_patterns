@@ -1,5 +1,3 @@
-package remote;
-
 public class GumballMachine {
     State soldOutState;
     State noQuarterState;

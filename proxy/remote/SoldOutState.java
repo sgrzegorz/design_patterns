@@ -1,5 +1,3 @@
-package remote;
-
 public class SoldOutState implements State {
     GumballMachine gumballMachine;
 

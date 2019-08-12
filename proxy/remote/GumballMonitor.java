@@ -1,5 +1,3 @@
-package remote;
-
 public class GumballMonitor {
     GumballMachine machine;
     public GumballMonitor(GumballMachine machine) {

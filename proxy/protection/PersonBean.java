@@ -1,5 +1,3 @@
-package protection;
-
 public interface PersonBean {
     String getName();
     String getGender();

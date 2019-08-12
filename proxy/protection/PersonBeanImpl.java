@@ -1,5 +1,3 @@
-package protection;
-
 public class PersonBeanImpl implements PersonBean {
     String name;
     String gender;
