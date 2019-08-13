@@ -38,3 +38,6 @@ public class GumballMonitor {
         }
 }
 }
+
+//GumballMachineRemote machine = (GumballMachineRemote) Naming.lookup("rmi://localhost/sonoo");
+//Naming.rebind("rmi:///sonoo", gumballMachine);
