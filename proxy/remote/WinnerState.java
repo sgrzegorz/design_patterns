@@ -1,5 +1,5 @@
 public class WinnerState implements State {
-    GumballMachine gumballMachine;
+    transient GumballMachine gumballMachine;
     public WinnerState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
     }
