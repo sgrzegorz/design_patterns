@@ -20,7 +20,6 @@ public class Main {
     }
 
 
-
     public void drive() throws ClassNotFoundException {
         PersonBean joe = getPersonFromDatabase("Joe Javabean");
         PersonBean ownerProxy = getOwnerProxy(joe);
