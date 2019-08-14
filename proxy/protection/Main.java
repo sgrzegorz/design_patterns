@@ -1,16 +1,27 @@
+import org.omg.CosNaming.NamingContextPackage.NotFound;
+
+import java.lang.reflect.Proxy;
+import java.util.ArrayList;
+
 public class Main {
     // instance variables here
+    ArrayList <PersonBean> people;
 
     public Main() {
-        initializeDatabase();
+        PersonBean person = new PersonBeanImpl();
+        person.setName("Joe Javabean");
+        people = new ArrayList<>();
+        people.add(person);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
         Main test = new Main();
         test.drive();
     }
 
-    public void drive() {
+
+
+    public void drive() throws ClassNotFoundException {
         PersonBean joe = getPersonFromDatabase("Joe Javabean");
         PersonBean ownerProxy = getOwnerProxy(joe);
         System.out.println("Name is " + ownerProxy.getName());
@@ -33,8 +44,22 @@ public class Main {
         nonOwnerProxy.setHotOrNotRating(3);
         System.out.println("Rating set from non owner proxy");
         System.out.println("Rating is " + nonOwnerProxy.getHotOrNotRating());
+    }
 
-// other methods like getOwnerProxy and getNonOwnerProxy here
+    private PersonBean getPersonFromDatabase(String name) throws ClassNotFoundException {
+        for(PersonBean p :people){
+            if(p.getName()== name) return p;
+        }
+        throw new ClassNotFoundException();
+    }
+
+    PersonBean getNonOwnerProxy(PersonBean person) {
+        return (PersonBean) Proxy.newProxyInstance(person.getClass().getClassLoader(), person.getClass().getInterfaces(), new NonOwnerInvocationHandler(person));
+    }
+
+
+    PersonBean getOwnerProxy(PersonBean person) {
+        return (PersonBean) Proxy.newProxyInstance(person.getClass().getClassLoader(), person.getClass().getInterfaces(), new OwnerInvocationHandler(person));
     }
 
 }

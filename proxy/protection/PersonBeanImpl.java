@@ -33,4 +33,3 @@ public class PersonBeanImpl implements PersonBean {
         ratingCount++;
     }
 }
-z
