@@ -1,5 +1,3 @@
-package virtual;
-
 import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
@@ -31,7 +29,6 @@ public class ImageProxy implements Icon {
         }
     }
 
-
     public void paintIcon(final Component c, Graphics g, int x, int y) {
         if (imageIcon != null) {
             imageIcon.paintIcon(c, g, x, y);
@@ -55,4 +52,6 @@ public class ImageProxy implements Icon {
             }
         }
     }
+
+
 }
