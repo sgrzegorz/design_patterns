@@ -9,7 +9,7 @@ import observer.*;
 
 //flock gromada stado
 public class Flock implements Quackable {
-    Observable observable;
+
     ArrayList quackers = new ArrayList();
 
     public void add(Quackable quacker){
@@ -24,22 +24,25 @@ public class Flock implements Quackable {
             Quackable quacker = (Quackable)iterator.next();
             quacker.quack();
         }
+
     }
+
 
     ///////////////OBSERVABLE
 
-    public Flock() {
-        observable = new Observable(this);
-    }
-
     @Override
     public void registerObserver(Observer observer) {
-        observable.registerObserver(observer);
+        Iterator iterator = quackers.iterator();
+        while (iterator.hasNext()) {
+            Quackable duck = (Quackable)iterator.next();
+            duck.registerObserver(observer);
+        }
+
     }
 
     @Override
     public void notifyObservers() {
-        observable.notifyObservers();
+
     }
 
     ////////////////////////////////////////////

@@ -16,6 +16,7 @@ public class MallardDuck implements Quackable {
         notifyObservers();
     }
 
+    ///////////////OBSERVABLE
     @Override
     public void registerObserver(Observer observer) {
         observable.registerObserver(observer);
@@ -26,4 +27,5 @@ public class MallardDuck implements Quackable {
     public void notifyObservers() {
         observable.notifyObservers();
     }
+    ///////////////////////////
 }

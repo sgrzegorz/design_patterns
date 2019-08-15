@@ -6,12 +6,11 @@ import quackable.*;
 
 //decorator
 public class QuackCounter implements Quackable {
-    Observable observable;
+
     Quackable duck;
     static int numberOfQuacks;
 
     public QuackCounter(Quackable duck){
-        observable = new Observable(this);
         this.duck=duck;
     }
 
@@ -27,12 +26,12 @@ public class QuackCounter implements Quackable {
     ///////////////OBSERVABLE
     @Override
     public void registerObserver(Observer observer) {
-        observable.registerObserver(observer);
+        duck.registerObserver(observer);
     }
 
     @Override
     public void notifyObservers() {
-        observable.notifyObservers();
+        duck.notifyObservers();
     }
 
     ////////////////////////////////////////////

@@ -6,9 +6,16 @@ import quackable.*;
 
 
 public class DuckCall implements Quackable {
+    Observable observable;
+
+    @Override
+    public void quack() {
+        System.out.println("Kwak");
+        notifyObservers();
+    }
+
 
     ///////////////OBSERVABLE
-    Observable observable;
 
     public DuckCall() {
         observable = new Observable(this);
@@ -25,9 +32,4 @@ public class DuckCall implements Quackable {
     }
 
     ////////////////////////////////////////////
-
-    @Override
-    public void quack() {
-        System.out.println("Kwak");
-    }
 }
