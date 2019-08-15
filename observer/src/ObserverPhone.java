@@ -12,10 +12,10 @@ public class ObserverPhone implements Observer {
     }
 
     public void update(Observable obs,Object arg) {
-        if (obs instanceof ObservableWeather){
-            ObservableWeather observableWeather = (ObservableWeather) obs;
-            this.temperature = observableWeather.getTemperature();
-            this.humidity = observableWeather.getHumidity();
+        if (obs instanceof ObservableWeatherStation){
+            ObservableWeatherStation observableWeatherStation = (ObservableWeatherStation) obs;
+            this.temperature = observableWeatherStation.getTemperature();
+            this.humidity = observableWeatherStation.getHumidity();
             display();
         }
 

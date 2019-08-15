@@ -2,13 +2,13 @@ import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
-public class ObservableWeather extends Observable{
+public class ObservableWeatherStation extends Observable{
     private ArrayList observers;
     private float temperature;
     private float humidity;
     private float pressure;
 
-    public ObservableWeather() {
+    public ObservableWeatherStation() {
     }
 
     public void measurementsChanged() {
