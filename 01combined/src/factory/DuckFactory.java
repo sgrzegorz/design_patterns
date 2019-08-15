@@ -1,3 +1,8 @@
+package factory;
+
+import quackable.*;
+import quackable.DuckCall;
+
 public class DuckFactory extends AbstractDuckFactory{
     @Override
     public Quackable createMallardDuck() {

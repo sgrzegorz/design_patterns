@@ -1,3 +1,9 @@
+package factory;
+
+import quackable.*;
+import quackable.DuckCall;
+import quackable.QuackCounter;
+
 public class CountingDuckFactory extends AbstractDuckFactory {
     @Override
     public Quackable createMallardDuck() {

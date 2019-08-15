@@ -1,11 +1,9 @@
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Observer;
+package observer;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Observer;
 
+// JEDNA KACZKA MA JEDEN OBSERVABLE. W TYM OBESERVABLE MOZE MIEC WIELE OBSERWATORÓW
 public class Observable {
     ArrayList observers = new ArrayList();
     QuackObservable duck;
