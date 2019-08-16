@@ -1,3 +1,7 @@
+import attack.AttackKill;
+import fly.FlyWithWings;
+import quack.QuackLoud;
+
 public class MallardDuck extends Duck {
     public MallardDuck(){
         quackBehavior = new QuackLoud();

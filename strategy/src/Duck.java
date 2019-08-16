@@ -1,3 +1,7 @@
+import attack.AttackBehavior;
+import fly.FlyBehavior;
+import quack.QuackBehavior;
+
 public abstract class Duck {
 
     FlyBehavior flyBehavior;
